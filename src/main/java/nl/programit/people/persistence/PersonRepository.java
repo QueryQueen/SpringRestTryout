@@ -4,6 +4,8 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 import nl.programit.people.domain.Person;
 
-public interface PersonRepository extends CrudRepository {
+//door component wordt het toegevoegd aan de beans 'encyclopedie'
+@Component
+public interface PersonRepository extends CrudRepository<Person, Long> {
 	Person findByFirstName(String firstName);
 }

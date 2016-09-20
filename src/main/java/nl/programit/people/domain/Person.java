@@ -14,6 +14,7 @@ public class Person implements Serializable {
 	private static final long serialVersionUID = 5801378338363587926L;
 	
 	//technical key
+	//dit worden nu vanzelf columns in je tabel
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
@@ -21,6 +22,7 @@ public class Person implements Serializable {
 	private String firstName;
 	private String lastName;
 
+	//for each field we need to create a setter and getter method	
 	public long getId(){
 		return id;
 	}
